@@ -1,15 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import HomePage from './components/pages/HomePage';
-import Theme from './components/Theme';
+import { AppProvider } from './providers/app';
 
 function App() {
   return (
-    <Theme>
-      <div className="App">
-        <HomePage/>
-      </div>
-    </Theme>
+    <AppProvider>
+        <div className="App">
+          <HomePage />
+        </div>
+    </AppProvider>
   );
 }
 

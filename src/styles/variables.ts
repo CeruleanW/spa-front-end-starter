@@ -1,21 +1,38 @@
 export const palette = {
   primary: '#4059ad',
   secondary: '#6b9ac4',
-  third: '#97d8c4',
+  tertiary: '#97d8c4',
+  fourth: '#8181A5',
+  fifth: '#2481cc',
   background: '#eff2f1',
   complement: '#f4b942',
-  text: {
-    primary: '#212121',
-  }
-}
+  danger: '#d32f2f',
+  alert: '#ffa000',
+  success: '#388e3c',
+  white: '#fff',
+  grayscale: [
+    '#212121',
+    '#414141',
+    '#616161',
+    '#9e9e9e',
+    '#bdbdbd',
+    '#e0e0e0',
+    '#eeeeee',
+    '#ffffff',
+  ],
+  primaryText: '#212121',
+  secondaryText: '#6C757D',
+};
 
-export const typography = {
+export const font = {
   heading: "'Montserrat', helvetica, arial, sans-serif",
   subheading: "Cabin, Lora, Georgia, times, serif",
   normal: "'Hind Madurai', helvetica, arial, sans-serif",
+  pre: 'Consolas, Liberation Mono, Menlo, Courier, monospace',
+  quote: 'Georgia, serif',
 }
 
-const size = {
+export const size = {
   mobileS: '320px',
   mobileM: '375px',
   mobileL: '425px',
