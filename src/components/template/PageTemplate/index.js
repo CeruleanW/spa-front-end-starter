@@ -2,6 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { rest } from 'lodash';
 
 const Wrapper = styled.div`
   display: flex;
@@ -31,16 +32,10 @@ const Footer = styled.footer`
   margin-top: auto;
 `;
 
-const PageTemplate = ({
-  header,
-  hero,
-  sponsor,
-  children,
-  footer,
-  ...props
-}) => {
+function PageTemplate({ children, ...optionals }) {
+  const { header, hero, sponsor, footer, ...rest } = optionals;
   return (
-    <Wrapper {...props}>
+    <Wrapper {...rest}>
       {header && <Header>{header}</Header>}
       <main>
         {hero && <Hero>{hero}</Hero>}
@@ -50,7 +45,7 @@ const PageTemplate = ({
       <Footer>{footer}</Footer>
     </Wrapper>
   );
-};
+}
 
 PageTemplate.propTypes = {
   header: PropTypes.node.isRequired,
